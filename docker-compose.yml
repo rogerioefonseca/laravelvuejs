@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  web:
+    image: rogeriofonseca/laravel:0.2
+    links:
+      - db
+    volumes:
+      - mysql: /var/lib/data
+
+  db:
+    image: mysql:5.7
+
+volumes:
+  mysql:
